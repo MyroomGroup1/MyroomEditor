@@ -1,0 +1,16 @@
+.left-panel {
+  width: 249px;
+  height: 100vh;
+  border-right: 1px solid #000000;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.component-list {
+  height: 80vh;
+}
+
+.save-button {
+  width: 100%;
+}
