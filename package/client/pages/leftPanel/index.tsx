@@ -1,7 +1,9 @@
 import axios from 'axios';
 import React from 'react';
 import TextComponent from '../../components/textComponent';
-import ImgComponent from '../../components/imgComponent'
+import ImgComponent from '../../components/imgComponent';
+import VideoComponent from '../../components/videoComponent';
+import CardComponent from '../../components/cardComponent';
 import './style.css';
 
 interface ILeftPanelProps {
@@ -16,6 +18,8 @@ export default function LeftPanel(props: ILeftPanelProps) {
       <div className="component-list">
         <TextComponent></TextComponent>
         <ImgComponent></ImgComponent>
+        <VideoComponent></VideoComponent>
+        <CardComponent></CardComponent>
       </div>
       <button
         className="save-button"
