@@ -31,3 +31,6 @@
 
 执行`bootstrap`命令安装 pnpm 和 pm2（如果你没有这两个东西的话）
 使用`start`命令启动服务
+
+## 5月18日
+将低代码编辑器中右侧设置各个组件参数的面板模块化了，在/package/client/pages/rightPanel下，新文件夹rightPanelComponent下四种类型组件的面板，可以分开编辑。
