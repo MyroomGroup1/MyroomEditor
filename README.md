@@ -34,3 +34,5 @@
 
 ## 5月18日
 将低代码编辑器中右侧设置各个组件参数的面板模块化了，在/package/client/pages/rightPanel下，新文件夹rightPanelComponent下四种类型组件的面板，可以分开编辑。
+## 5月18日
+低代码编辑器左侧面板组件分开写在/package/client/components下各个文件夹中，写不同组件的同学可以在不同文件夹下修改，对应拖拽，中间画布渲染，即右侧编辑面板对应都修改好了。
