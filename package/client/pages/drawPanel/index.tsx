@@ -24,8 +24,8 @@ export default function DrawPanel(props: IDrawPanelProps) {
       setData([
         ...data,
         {
-          id: `text-${data.length + 1}`,
-          type: 'text',
+          id: `${type}-${data.length + 1}`,
+          type: `${type}`,
           data: `我是新建的${type}`,
           color: '#000000',
           size: '12px',

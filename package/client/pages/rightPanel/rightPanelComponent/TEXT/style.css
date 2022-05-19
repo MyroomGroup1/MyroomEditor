@@ -1,0 +1,35 @@
+#title {
+  color: #482ff7;
+  font-weight: 700;
+  margin: 10px;
+  text-align: center;
+}
+h4{
+  color: #3d5af1;
+}
+.text-config-item {
+  margin: 5px 0;
+}
+button{
+  cursor: pointer;
+  margin: 10px;
+  font-size: 15px;
+  padding: 5px 30px;
+  font-weight: 400;
+  border: 1px solid #482ff7;
+  background-color: #3d5af1;
+  border-radius: 8px;
+  color: #fff;
+  transition: all 0.1s ease-out;
+}
+button:hover,
+button:focus{
+  color: #482ff7;
+  background-color: #fdfdfd;
+}
+#rightButton{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+}

@@ -1,4 +1,5 @@
 .right-panel {
+  position: relative;
   width: 249px;
   height: 100vh;
   border-left: 1px solid #000000;
@@ -7,6 +8,3 @@
   padding: 20px;
 }
 
-.text-config-item {
-  margin: 4px 0;
-}

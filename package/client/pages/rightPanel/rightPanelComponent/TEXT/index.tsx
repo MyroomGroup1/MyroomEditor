@@ -14,8 +14,9 @@ export default function textPanel(props:ItextPanelProps){
 
       return (
         <div key={elementId}>
-          <div>文字</div>
-          <br />
+          <h2 id='title'>文字元素</h2>
+          <div className="content">
+<h4>内容</h4>
           <div className="flex-row-space-between text-config-item">
             <div>文字内容:</div>
             <input
@@ -46,7 +47,10 @@ export default function textPanel(props:ItextPanelProps){
               type="text"
             ></input>
           </div>
-          <div className="flex-row-space-between text-config-item">
+          </div>
+          <div className="position">
+            <h4>位置</h4>
+            <div className="flex-row-space-between text-config-item">
             <div>width:</div>
             <input
               defaultValue={elementData.width}
@@ -86,8 +90,10 @@ export default function textPanel(props:ItextPanelProps){
               type="text"
             ></input>
           </div>
+          </div>
+          
           <br />
-          <button
+          <button id='rightButton'
             onClick={() => {
               findCurrentElementAndChangeData(elementId, 'data', inputDomObject[0].value);
               findCurrentElementAndChangeData(elementId, 'color', inputDomObject[1].value);

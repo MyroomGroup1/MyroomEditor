@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import '../TEXT/style.css';
 
 interface IimagePanelProps{
   elementId:string;
@@ -14,10 +14,11 @@ export default function imagePanel(props:IimagePanelProps){
 
       return (
         <div key={elementId}>
-          <div>图片元素</div>
-          <br />
-          <div className="flex-row-space-between text-config-item">
-            <div>文字内容:</div>
+          <h2 id='title'>图片元素</h2>
+          <div className="content"> 
+          <h4>内容</h4>
+           <div className="flex-row-space-between text-config-item">
+            <div>图片内容:</div>
             <input
               defaultValue={elementData.data}
               ref={(element) => {
@@ -27,7 +28,7 @@ export default function imagePanel(props:IimagePanelProps){
             ></input>
           </div>
           <div className="flex-row-space-between text-config-item">
-            <div>文字颜色:</div>
+            <div>图片颜色:</div>
             <input
               defaultValue={elementData.color}
               ref={(element) => {
@@ -37,7 +38,7 @@ export default function imagePanel(props:IimagePanelProps){
             ></input>
           </div>
           <div className="flex-row-space-between text-config-item">
-            <div>文字大小:</div>
+            <div>图片大小:</div>
             <input
               defaultValue={elementData.size}
               ref={(element) => {
@@ -45,7 +46,9 @@ export default function imagePanel(props:IimagePanelProps){
               }}
               type="text"
             ></input>
-          </div>
+          </div></div>
+          <div className="position">
+            <h4>位置</h4>
           <div className="flex-row-space-between text-config-item">
             <div>width:</div>
             <input
@@ -86,8 +89,9 @@ export default function imagePanel(props:IimagePanelProps){
               type="text"
             ></input>
           </div>
+          </div>
           <br />
-          <button
+          <button id='rightButton'
             onClick={() => {
               findCurrentElementAndChangeData(elementId, 'data', inputDomObject[0].value);
               findCurrentElementAndChangeData(elementId, 'color', inputDomObject[1].value);
