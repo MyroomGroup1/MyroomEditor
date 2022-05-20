@@ -14,7 +14,7 @@ export default function DrawPanel(props: IDrawPanelProps) {
   const { data, setRightPanelType, setRightPanelElementId, setData } = props;
 
   const [, drop] = useDrop(() => ({
-    accept: [COMPONENT_TYPE.TEXT,COMPONENT_TYPE.IMAGE,COMPONENT_TYPE.VIDEO,COMPONENT_TYPE.CARD],
+    accept: [COMPONENT_TYPE.TEXT, COMPONENT_TYPE.IMAGE, COMPONENT_TYPE.VIDEO, COMPONENT_TYPE.CARD],
     drop: (item, monitor) => {
       const { x, y } = monitor.getClientOffset();
       const currentX = x - 310;
@@ -29,10 +29,11 @@ export default function DrawPanel(props: IDrawPanelProps) {
           data: `我是新建的${type}`,
           color: '#000000',
           size: '12px',
-          width: '100px',
-          height: '20px',
+          width: '200px',
+          height: '150px',
           left: `${currentX}px`,
-          top: `${currentY}px`
+          top: `${currentY}px`,
+          isBorder: true
         }
       ]);
     }
@@ -56,14 +57,14 @@ export default function DrawPanel(props: IDrawPanelProps) {
               height: item.height,
               left: item.left,
               top: item.top,
-              position: 'absolute',
-              backgroundColor: '#bbbbbb'
+              position: 'absolute'
             }}
+            className={item.isBorder ? "isBorder" : "noBorder"}
           >
             {item.data}
           </div>
         );
-      }else if(item.type === COMPONENT_TYPE.IMAGE){
+      } else if (item.type === COMPONENT_TYPE.IMAGE) {
         output.push(
           <div
             key={item.id}
@@ -78,15 +79,16 @@ export default function DrawPanel(props: IDrawPanelProps) {
               height: item.height,
               left: item.left,
               top: item.top,
-              position: 'absolute',
-              backgroundColor: '#bbbbbb'
+              position: 'absolute'
             }}
+            className={item.isBorder ? "isBorder" : "noBorder"}
+
           >
             {item.data}
           </div>
         );
 
-      }else if(item.type === COMPONENT_TYPE.VIDEO){
+      } else if (item.type === COMPONENT_TYPE.VIDEO) {
         output.push(
           <div
             key={item.id}
@@ -101,15 +103,16 @@ export default function DrawPanel(props: IDrawPanelProps) {
               height: item.height,
               left: item.left,
               top: item.top,
-              position: 'absolute',
-              backgroundColor: '#bbbbbb'
+              position: 'absolute'
             }}
+            className={item.isBorder ? "isBorder" : "noBorder"}
+
           >
             {item.data}
           </div>
         );
 
-      }else if (item.type === COMPONENT_TYPE.CARD){
+      } else if (item.type === COMPONENT_TYPE.CARD) {
         output.push(
           <div
             key={item.id}
@@ -124,16 +127,16 @@ export default function DrawPanel(props: IDrawPanelProps) {
               height: item.height,
               left: item.left,
               top: item.top,
-              position: 'absolute',
-              backgroundColor: '#bbbbbb'
+              position: 'absolute'
             }}
+            className={item.isBorder ? "isBorder" : "noBorder"}
+
           >
             {item.data}
           </div>
         );
       }
     }
-
     return output;
   };
 

@@ -25,7 +25,7 @@ export default function RightPanel(props: IRigthPanelProps) {
     return undefined;
   };
 
-  const findCurrentElementAndChangeData = (id: string, key: string, changedData: any) => {
+  const findCurrentElementAndChangeData = (id: string, key: string, changedData: any, x) => {
     for (let item of data) {
       if (item.id === id) {
         item[key] = changedData;
@@ -33,31 +33,33 @@ export default function RightPanel(props: IRigthPanelProps) {
     }
     setDrawPanelData([...data]);
   };
+  const changeConfirm = () => {
+    console.log(data)
+  };
 
   const generateRightPanel = () => {
     if (type === RIGHT_PANEL_TYPE.NONE) {
-      return <div>未选中元素</div>;
+      return <h1 className='notChoose'>未选中元素</h1>;
     } else if (type === RIGHT_PANEL_TYPE.TEXT) {
       return (
-       <TextPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData}></TextPanel>
-     )
-    }else if(type === RIGHT_PANEL_TYPE.IMAGE){
-      return (
-        <ImagePanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData}></ImagePanel>
+        <TextPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData} changeConfirm={changeConfirm}></TextPanel>
       )
-    }else if(type === RIGHT_PANEL_TYPE.VIDEO){
+    } else if (type === RIGHT_PANEL_TYPE.IMAGE) {
       return (
-        <VideoPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData}></VideoPanel>
+        <ImagePanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData} changeConfirm={changeConfirm}></ImagePanel>
       )
-
-    }else if(type === RIGHT_PANEL_TYPE.CARD){
+    } else if (type === RIGHT_PANEL_TYPE.VIDEO) {
       return (
-        <CardPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData}></CardPanel>
+        <VideoPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData} changeConfirm={changeConfirm}></VideoPanel>
+      )
+    } else if (type === RIGHT_PANEL_TYPE.CARD) {
+      return (
+        <CardPanel elementId={elementId} findCurrentElement={findCurrentElement} findCurrentElementAndChangeData={findCurrentElementAndChangeData} changeConfirm={changeConfirm}></CardPanel>
       )
     }
-    
+
 
   };
 
-  return <div className="right-panel">{generateRightPanel()}</div>;
+  return (<div className="right-panel">{generateRightPanel()}</div>);
 }

@@ -4,13 +4,16 @@
   margin: 10px;
   text-align: center;
 }
-h4{
+
+h4 {
   color: #3d5af1;
 }
+
 .text-config-item {
   margin: 5px 0;
 }
-button{
+
+button {
   cursor: pointer;
   margin: 10px;
   font-size: 15px;
@@ -22,14 +25,25 @@ button{
   color: #fff;
   transition: all 0.1s ease-out;
 }
+
 button:hover,
-button:focus{
+button:focus {
   color: #482ff7;
   background-color: #fdfdfd;
 }
-#rightButton{
+
+#rightButton {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 20px;
+}
+
+.checkboxfront {
+  display: inline-block;
+}
+
+.checkbox {
+  display: inline-block;
+  margin-left: 20px;
 }

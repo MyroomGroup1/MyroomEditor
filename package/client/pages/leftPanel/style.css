@@ -1,4 +1,6 @@
 .left-panel {
+  display: flex;
+  flex-wrap: wrap;
   width: 249px;
   height: 100vh;
   border-right: 1px solid #000000;
@@ -8,9 +10,16 @@
 }
 
 .component-list {
-  height: 80vh;
+  margin: 10vh 0;
+  height: 25vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .save-button {
+  letter-spacing: 0.3em;
   width: 100%;
+  font-size: 20px;
+  font-weight: 700;
 }

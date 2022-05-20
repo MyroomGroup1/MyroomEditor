@@ -9,38 +9,17 @@ import { RIGHT_PANEL_TYPE } from '../../constants';
 
 const MOCK_DRAW_DATA = [
   {
-    id: 'text-1',
-    type: 'text',
-    data: '我是 1 号文字',
-    color: '#FF0000',
+    id: `text-1`,
+    type: `text`,
+    data: `我是新建的text`,
+    color: '#000000',
     size: '12px',
-    width: '100px',
-    height: '20px',
-    left: '100px',
-    top: '100px'
-  },
-  {
-    id: 'image-1',
-    type: 'image',
-    data: '我是 1 号图片',
-    color: '#00FF00',
-    size: '12px',
-    width: '100px',
-    height: '20px',
-    left: '100px',
-    top: '150px'
-  },
-  // {
-  //   id: 'image-2',
-  //   type: 'image',
-  //   data: '我是 2号图片',
-  //   color: '#0000FF',
-  //   size: '12px',
-  //   width: '100px',
-  //   height: '20px',
-  //   left: '100px',
-  //   top: '200px'
-  // }
+    width: '200px',
+    height: '150px',
+    left: `100px`,
+    top: `100px`,
+    isBorder: true
+  }
 ];
 
 export default function App() {

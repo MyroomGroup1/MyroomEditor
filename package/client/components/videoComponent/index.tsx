@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDrag } from 'react-dnd';
 import { COMPONENT_TYPE } from '../../constants';
-import './style.css';
+import '../cardComponent/style.css'
 
 export default function VideoComponent() {
   const [_, drag] = useDrag(() => ({
@@ -9,7 +9,7 @@ export default function VideoComponent() {
   }));
 
   return (
-    <div className="video-component" ref={drag}>
+    <div className="card-component" ref={drag}>
       视频组件
     </div>
   );
