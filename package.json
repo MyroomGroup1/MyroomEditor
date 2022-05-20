@@ -8,11 +8,11 @@
     "build:client": "NODE_ENV=prod webpack --config ./package/client/build/webpack.prod.js",
     "build:server": "NODE_ENV=prod tsc --p ./package/server",
     "clean": "rm -rf output",
-    "dev:all": "npm run dev:client & npm run dev:server",
+    "dev:all": "concurrently \"npm run dev:client\" \"npm run dev:server\"",
     "dev:client": "cross-env NODE_ENV=dev webpack serve --progress --hot --config ./package/client/build/webpack.dev.js",
     "dev:server": "cross-env NODE_ENV=dev nodemon --watch './package/server/**/*.ts' --exec 'ts-node' ./package/server/app.ts",
     "format": "prettier --write './package/**/*.ts' './package/**/*.js'",
-    "start": "NODE_ENV=prod pm2 start output/app.js"
+    "start": "cross-env NODE_ENV=prod pm2 start output/app.js"
   },
   "author": "shadowings-zy",
   "license": "ISC",
