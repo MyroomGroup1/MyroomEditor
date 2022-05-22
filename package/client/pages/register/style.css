@@ -1,0 +1,46 @@
+.page{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.particles-bg-canvas-self{
+    background: #eeeeee;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /*background-color: rgba(255,255,255,0.5);*/
+    height:100vh;
+    width: 60vw;
+}
+.front_text{
+    font-weight: bolder;
+    font-family: 等线;
+    color: darkgray;
+    font-size: x-large;
+}
+.input_item{
+    margin-top: 50px;
+    width:30vw;
+    height: 35px;
+    border:none;
+    border-radius: 10px;
+}
+
+.submit_btn{
+    background-color: #1890FF;
+    color:white;
+    margin-top: 70px;
+    width:30vw;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+}
+
+.info_text{
+    margin-top: 10px;
+    color: #1890FF;
+    margin-left: 250px;
+}

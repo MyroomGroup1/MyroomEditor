@@ -27,6 +27,7 @@
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.3",
     "babel-loader": "^8.2.5",
+    "cross-env": "^7.0.3",
     "css-loader": "^6.7.1",
     "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.6.0",
@@ -41,13 +42,16 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "concurrently": "^7.2.0",
     "koa": "^2.13.4",
     "koa-body": "^5.0.0",
     "koa-router": "^10.1.1",
     "koa-static": "^5.0.0",
+    "particles-bg": "^2.5.5",
     "react": "^18.1.0",
     "react-dnd": "^16.0.1",
     "react-dnd-html5-backend": "^16.0.1",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-router-dom": "^6.3.0"
   }
 }

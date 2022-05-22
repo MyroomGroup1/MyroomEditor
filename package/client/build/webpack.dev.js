@@ -8,12 +8,14 @@ module.exports = merge(base, {
   devtool: 'inline-source-map',
   output: {
     filename: 'js/[name].[fullhash].js',
-    path: path.resolve(__dirname, '../../../output/client')
+    path: path.resolve(__dirname, '../../../output/client'),
+    publicPath:'/'
   },
   devServer: {
     port: 8080,
     compress: true,
-    proxy: { context: ['/api', '/api'], target: 'http://localhost:8081' }
+    proxy: { context: ['/api', '/api'], target: 'http://localhost:8081' },
+    historyApiFallback:{disableDotRule:true}
   },
   plugins: [
     new MiniCssExtractPlugin({
