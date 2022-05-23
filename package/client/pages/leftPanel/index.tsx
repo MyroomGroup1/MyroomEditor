@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React from 'react';
 import TextComponent from '../../components/textComponent';
-import ImgComponent from '../../components/imgComponent';
+import ImgComponent from '../../components/imageComponent';
 import VideoComponent from '../../components/videoComponent';
 import CardComponent from '../../components/cardComponent';
 import './style.css';

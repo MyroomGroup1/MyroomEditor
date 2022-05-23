@@ -12,7 +12,6 @@ export default function imagePanel(props: IimagePanelProps) {
   const { elementId, findCurrentElement, findCurrentElementAndChangeData, changeConfirm } = props;
   const elementData = findCurrentElement(elementId);
   const inputDomObject = [];
-  inputDomObject[7] = false
 
   return (
     <div key={elementId}>
@@ -20,7 +19,7 @@ export default function imagePanel(props: IimagePanelProps) {
       <div className="content">
         <h4>内容</h4>
         <div className="flex-row-space-between text-config-item">
-          <div>图片内容:</div>
+          <div>图片链接:</div>
           <input
             defaultValue={elementData.data}
             ref={(element) => {
@@ -29,26 +28,7 @@ export default function imagePanel(props: IimagePanelProps) {
             type="text"
           ></input>
         </div>
-        <div className="flex-row-space-between text-config-item">
-          <div>图片颜色:</div>
-          <input
-            defaultValue={elementData.color}
-            ref={(element) => {
-              inputDomObject[1] = element;
-            }}
-            type="text"
-          ></input>
-        </div>
-        <div className="flex-row-space-between text-config-item">
-          <div>图片大小:</div>
-          <input
-            defaultValue={elementData.size}
-            ref={(element) => {
-              inputDomObject[2] = element;
-            }}
-            type="text"
-          ></input>
-        </div></div>
+      </div>
       <div className="position">
         <h4>位置</h4>
         <div className="flex-row-space-between text-config-item">
@@ -56,7 +36,7 @@ export default function imagePanel(props: IimagePanelProps) {
           <input
             defaultValue={elementData.width}
             ref={(element) => {
-              inputDomObject[3] = element;
+              inputDomObject[1] = element;
             }}
             type="text"
           ></input>
@@ -66,7 +46,7 @@ export default function imagePanel(props: IimagePanelProps) {
           <input
             defaultValue={elementData.height}
             ref={(element) => {
-              inputDomObject[4] = element;
+              inputDomObject[2] = element;
             }}
             type="text"
           ></input>
@@ -76,7 +56,7 @@ export default function imagePanel(props: IimagePanelProps) {
           <input
             defaultValue={elementData.top}
             ref={(element) => {
-              inputDomObject[5] = element;
+              inputDomObject[3] = element;
             }}
             type="text"
           ></input>
@@ -86,33 +66,20 @@ export default function imagePanel(props: IimagePanelProps) {
           <input
             defaultValue={elementData.left}
             ref={(element) => {
-              inputDomObject[6] = element;
+              inputDomObject[4] = element;
             }}
             type="text"
           ></input>
-        </div>
-        <div className="text-config-item">
-          <div className="checkboxfront" >是否需要边框:</div>
-          <input type="checkbox"
-            onClick={(e) => {
-              inputDomObject[7] = e.target.checked
-              console.log(e.target.checked)
-            }} className="checkbox"
-          />
         </div>
       </div>
       <br />
       <button id='rightButton'
         onClick={() => {
           findCurrentElementAndChangeData(elementId, 'data', inputDomObject[0].value);
-          findCurrentElementAndChangeData(elementId, 'color', inputDomObject[1].value);
-          findCurrentElementAndChangeData(elementId, 'size', inputDomObject[2].value);
-          findCurrentElementAndChangeData(elementId, 'width', inputDomObject[3].value);
-          findCurrentElementAndChangeData(elementId, 'height', inputDomObject[4].value);
-          findCurrentElementAndChangeData(elementId, 'top', inputDomObject[5].value);
-          findCurrentElementAndChangeData(elementId, 'left', inputDomObject[6].value);
-          findCurrentElementAndChangeData(elementId, 'isBorder', inputDomObject[7]);
-
+          findCurrentElementAndChangeData(elementId, 'width', inputDomObject[1].value);
+          findCurrentElementAndChangeData(elementId, 'height', inputDomObject[2].value);
+          findCurrentElementAndChangeData(elementId, 'top', inputDomObject[3].value);
+          findCurrentElementAndChangeData(elementId, 'left', inputDomObject[4].value);
           changeConfirm();
         }}
       >

@@ -72,19 +72,18 @@ export default function DrawPanel(props: IDrawPanelProps) {
               setRightPanelType(RIGHT_PANEL_TYPE.IMAGE);
               setRightPanelElementId(item.id);
             }}
-            style={{
-              color: item.color,
-              fontSize: item.size,
-              width: item.width,
-              height: item.height,
-              left: item.left,
-              top: item.top,
-              position: 'absolute'
-            }}
-            className={item.isBorder ? "isBorder" : "noBorder"}
-
+            className='imageDiv'
           >
-            {item.data}
+            <img
+              src={item.data}
+              style={{
+                width: item.width,
+                height: item.height,
+                left: item.left,
+                top: item.top,
+                position: 'absolute'
+              }}
+            />
           </div>
         );
 

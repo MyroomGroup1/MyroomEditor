@@ -19,6 +19,16 @@ const MOCK_DRAW_DATA = [
     left: `100px`,
     top: `100px`,
     isBorder: true
+  },
+  {
+    id: `image-1`,
+    type: 'image',
+    data: `https://img2.baidu.com/it/u=2831627057,1326496858&fm=253&fmt=auto&app=138&f=JPEG?w=260&h=260`,
+    width: '200px',
+    height: '150px',
+    left: `550px`,
+    top: `100px`,
+    isBorder: false
   }
 ];
 
