@@ -53,3 +53,7 @@
 ## 5月23日
 #dyhes
 借助github actions 实现自动部署
+
+## 5月23日
+#maple826
+添加了图片组件
