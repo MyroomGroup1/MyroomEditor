@@ -32,6 +32,8 @@
 执行`bootstrap`命令安装 pnpm 和 pm2（如果你没有这两个东西的话）
 使用`start`命令启动服务
 
+## 五、开发日志
+
 ## 5月18日
 #zan
 将低代码编辑器中右侧设置各个组件参数的面板模块化了，在/package/client/pages/rightPanel下，新文件夹rightPanelComponent下四种类型组件的面板，可以分开编辑。
@@ -47,3 +49,7 @@
 ## 5月21日
 #zan
 页面美化了一下，将组件背景改为边框，测试了一下后端接口数据提交修改都正常。
+
+## 5月23日
+#dyhes
+借助github actions 实现自动部署
