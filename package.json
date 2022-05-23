@@ -12,7 +12,7 @@
     "dev:client": "cross-env NODE_ENV=dev webpack serve --progress --hot --config ./package/client/build/webpack.dev.js",
     "dev:server": "cross-env NODE_ENV=dev nodemon --watch './package/server/**/*.ts' --exec 'ts-node' ./package/server/app.ts",
     "format": "prettier --write './package/**/*.ts' './package/**/*.js'",
-    "start": "cross-env NODE_ENV=prod pm2 start output/app.js"
+    "start": "cross-env NODE_ENV=prod pm2 restart output/app.js"
   },
   "author": "shadowings-zy",
   "license": "ISC",
