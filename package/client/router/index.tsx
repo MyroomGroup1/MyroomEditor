@@ -1,5 +1,7 @@
 import Login from '../pages/login';
 import Register from '../pages/register';
+import UserInfo from '../pages/userInfo';
+import ProjectList from '../pages/projectList';
 import App from '../pages/app';
 import React from 'react';
 import {BrowserRouter,Routes,Route} from 'react-router-dom';
@@ -25,9 +27,11 @@ class MyRouter extends React.Component {
     return (
       <BrowserRouter>
         <Routes>
-            <Route path='/' element={<Login />} /> //路由注册和组件绑定
-            <Route path='/register' element={<Register />}/>
-            <Route path='/edit' element={<App />} />
+          <Route path='/' element={<Login />} /> //路由注册和组件绑定
+          <Route path='/register' element={<Register />}/>
+          <Route path='/userInfo' element={<UserInfo />}/>
+          <Route path='/projectList' element={<ProjectList />} />
+          <Route path='/edit' element={<App />} />
         </Routes>
       </BrowserRouter>
     )

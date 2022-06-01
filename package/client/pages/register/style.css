@@ -2,11 +2,12 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    align-items: center;
 }
 .particles-bg-canvas-self{
     background: #eeeeee;
 }
-.container{
+.register_container{
     display: flex;
     justify-content: center;
     align-items: center;
